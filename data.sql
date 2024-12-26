@@ -1,4 +1,4 @@
-﻿-- ================= Thêm dữ liệu mẫu cho tất cả các bảng =================
+-- ================= Thêm dữ liệu mẫu cho tất cả các bảng =================
 USE DB_QLSieuThi
 GO
 
@@ -43,6 +43,12 @@ INSERT INTO DANHMUC (MaDanhMuc, TenDanhMuc, MoTa)
 VALUES ('DM002', N'Bánh kẹo', N'Bánh quy, bánh mì, các loại kẹo');
 INSERT INTO DANHMUC (MaDanhMuc, TenDanhMuc, MoTa)
 VALUES ('DM003', N'Mỹ phẩm', N'Chăm sóc sắc đẹp, kem dưỡng da');
+INSERT INTO DANHMUC (MaDanhMuc, TenDanhMuc, MoTa)
+VALUES ('DM004', N'Hàng gia dụng', N'Sản phẩm sử dụng trong gia đình như bột giặt, nước rửa chén');
+INSERT INTO DANHMUC (MaDanhMuc, TenDanhMuc, MoTa)
+VALUES ('DM005', N'Gia vị và thực phẩm đóng hộp', N'Gia vị và các loại thực phẩm tiện lợi, đóng hộp');
+INSERT INTO DANHMUC (MaDanhMuc, TenDanhMuc, MoTa)
+VALUES ('DM006', N'Mỹ phẩm và làm đẹp', N'Sản phẩm mỹ phẩm và chăm sóc cá nhân, làm đẹp');
 
 -- Bảng SANPHAM
 INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
@@ -51,28 +57,44 @@ INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
 VALUES ('SP002', N'Bánh quy', 'DM002', 200, N'Kinh Đô', 50000, N'Bánh quy giòn thơm ngon');
 INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
 VALUES ('SP003', N'Kem đánh răng', 'DM003', 150, N'Colgate', 20000, N'Kem đánh răng trắng răng');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP004', N'Nước ngọt Coca-Cola', 'DM001', 300, N'Coca-Cola', 15000, N'Nước ngọt giải khát');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP005', N'Mì ăn liền', 'DM002', 500, N'Acecook', 6000, N'Mì ăn liền tiện lợi');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP006', N'Dầu gội Head & Shoulders', 'DM003', 100, N'P&G', 120000, N'Dầu gội sạch gàu');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP007', N'Bột giặt OMO', 'DM004', 200, N'Unilever', 45000, N'Bột giặt trắng sạch vượt trội');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP008', N'Nước tương Maggi', 'DM005', 250, N'Nestle', 20000, N'Nước tương ngon đậm đà');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP009', N'Sữa đặc Ông Thọ', 'DM001', 150, N'Vinamilk', 25000, N'Sữa đặc ngon cho nấu ăn');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP010', N'Trái cây sấy khô', 'DM002', 100, N'Lâm Đồng', 75000, N'Trái cây sấy khô bổ dưỡng');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP011', N'Son môi', 'DM006', 80, N'Maybelline', 150000, N'Son môi màu đẹp và dưỡng môi');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP012', N'Nước rửa chén Sunlight', 'DM004', 300, N'Unilever', 30000, N'Nước rửa chén sạch dầu mỡ');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP013', N'Cháo ăn liền', 'DM002', 200, N'VinaBowl', 10000, N'Cháo ăn liền tiện lợi');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP014', N'Xịt khử mùi', 'DM003', 150, N'Axe', 90000, N'Xịt khử mùi thơm mát cả ngày');
+INSERT INTO SANPHAM (MaSP, TenSP, MaDanhMuc, SoLuongTD, NSX, GiaNiemYet, MoTa)
+VALUES ('SP015', N'Thịt hộp Spam', 'DM005', 120, N'Hormel Foods', 60000, N'Thịt hộp cao cấp và tiện lợi');
 
 -- Bảng FLASHSALE 
 INSERT INTO FLASHSALE (MaKM, MaSP, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
 VALUES ('KM001', 'SP001', 0.30, 50, 10); 
 INSERT INTO FLASHSALE (MaKM, MaSP, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
 VALUES ('KM002', 'SP002', 0.20, 100, 20); 
-INSERT INTO FLASHSALE (MaKM, MaSP, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
-VALUES ('KM003', 'SP003', 0.15, 30, 5);
-INSERT INTO FLASHSALE (MaKM, MaSP, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
-VALUES ('KM004', 'SP002', 0.30, 50, 10); 
 
 -- Bảng COMBOSALE
 INSERT INTO COMBOSALE (MaKM, MaSP1, MaSP2, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
-VALUES ('KM001', 'SP001', 'SP002', 0.25, 40, 5);
-INSERT INTO COMBOSALE (MaKM, MaSP1, MaSP2, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
-VALUES ('KM002', 'SP002', 'SP003', 0.10, 60, 10);
+VALUES ('KM003', 'SP001', 'SP002', 0.25, 40, 5);
 
 -- Bảng MEMBERSALE
 INSERT INTO MEMBERSALE (MaKM, MaSP, MucThanThiet, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
-VALUES ('KM001', 'SP001', 'T1', 0.30, 50, 10);
-INSERT INTO MEMBERSALE (MaKM, MaSP, MucThanThiet, TiLeGiamGia, SoLuongGioiHan, SoLuongSPDaApDung)
-VALUES ('KM002', 'SP002', 'T2', 0.20, 100, 20);
+VALUES ('KM004', 'SP001', 'T1', 0.30, 50, 10);
 
 -- Bảng LICHSUGIA 
 INSERT INTO LICHSUGIA (MaGia, MaSP, NgayBatDau, NgayKetThuc, GiaBan)
