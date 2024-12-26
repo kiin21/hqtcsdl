@@ -8,9 +8,9 @@ INSERT [dbo].[KHACHHANG] ([MaKH], [TenKH], [SDT], [NgaySinh], [DiaChi], [MucThan
 INSERT [dbo].[KHACHHANG] ([MaKH], [TenKH], [SDT], [NgaySinh], [DiaChi], [MucThanThiet], [NgayLap]) VALUES (N'KH002', N'Trần Thị B', N'0987654321', CAST(N'1985-05-15' AS Date), N'456 Đường DEF, Quận 2, TP.HCM', N'T2', CAST(N'2024-11-10' AS Date))
 INSERT [dbo].[KHACHHANG] ([MaKH], [TenKH], [SDT], [NgaySinh], [DiaChi], [MucThanThiet], [NgayLap]) VALUES (N'KH003', N'Phạm Minh C', N'0912345678', CAST(N'2000-08-20' AS Date), N'789 Đường GHI, Quận 3, TP.HCM', N'T3', CAST(N'2024-12-01' AS Date))
 GO
-INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH001', N'KH001', 50000, N'Chưa sử dụng', CAST(N'2024-11-01' AS Date), CAST(N'2024-11-10' AS Date))
-INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH002', N'KH002', 10000, N'Chưa sử dụng', CAST(N'2024-11-05' AS Date), CAST(N'2024-11-15' AS Date))
-INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH003', N'KH003', 100000, N'Chưa sử dụng', CAST(N'2024-12-01' AS Date), CAST(N'2024-12-10' AS Date))
+INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH001', N'KH001', 50000, N'Chưa sử dụng', CAST(N'2024-11-01' AS Date), CAST(N'2025-11-10' AS Date))
+INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH002', N'KH002', 10000, N'Chưa sử dụng', CAST(N'2024-11-05' AS Date), CAST(N'2025-11-15' AS Date))
+INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH003', N'KH003', 100000, N'Chưa sử dụng', CAST(N'2024-12-01' AS Date), CAST(N'2025-12-10' AS Date))
 GO
 INSERT [dbo].[DONHANG] ([MaDH], [MaKH], [NgayLap], [MaPhieuMuaHang], [HinhThucDatHang], [TongTien], [ThanhTien]) VALUES (N'DH001', N'KH001', CAST(N'2024-11-01' AS Date), NULL, N'Online', 0, 0)
 INSERT [dbo].[DONHANG] ([MaDH], [MaKH], [NgayLap], [MaPhieuMuaHang], [HinhThucDatHang], [TongTien], [ThanhTien]) VALUES (N'DH002', N'KH002', CAST(N'2024-11-02' AS Date), NULL, N'Offine', 0, 0)
