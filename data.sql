@@ -8,9 +8,9 @@ INSERT [dbo].[KHACHHANG] ([MaKH], [TenKH], [SDT], [NgaySinh], [DiaChi], [MucThan
 INSERT [dbo].[KHACHHANG] ([MaKH], [TenKH], [SDT], [NgaySinh], [DiaChi], [MucThanThiet], [NgayLap]) VALUES (N'KH002', N'Trần Thị B', N'0987654321', CAST(N'1985-05-15' AS Date), N'456 Đường DEF, Quận 2, TP.HCM', N'T2', CAST(N'2024-11-10' AS Date))
 INSERT [dbo].[KHACHHANG] ([MaKH], [TenKH], [SDT], [NgaySinh], [DiaChi], [MucThanThiet], [NgayLap]) VALUES (N'KH003', N'Phạm Minh C', N'0912345678', CAST(N'2000-08-20' AS Date), N'789 Đường GHI, Quận 3, TP.HCM', N'T3', CAST(N'2024-12-01' AS Date))
 GO
-INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH001', N'KH001', 1, N'Đang xử lý', CAST(N'2024-11-01' AS Date), CAST(N'2024-11-10' AS Date))
-INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH002', N'KH002', 2, N'Đã hoàn thành', CAST(N'2024-11-05' AS Date), CAST(N'2024-11-15' AS Date))
-INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH003', N'KH003', 1, N'Đang xử lý', CAST(N'2024-12-01' AS Date), CAST(N'2024-12-10' AS Date))
+INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH001', N'KH001', 50000, N'Chưa sử dụng', CAST(N'2024-11-01' AS Date), CAST(N'2024-11-10' AS Date))
+INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH002', N'KH002', 10000, N'Chưa sử dụng', CAST(N'2024-11-05' AS Date), CAST(N'2024-11-15' AS Date))
+INSERT [dbo].[PHIEUMUAHANG] ([MaPhieuMuaHang], [MaKH], [QuaTang], [TrangThai], [NgayBatDau], [NgayKetThuc]) VALUES (N'PMH003', N'KH003', 100000, N'Chưa sử dụng', CAST(N'2024-12-01' AS Date), CAST(N'2024-12-10' AS Date))
 GO
 INSERT [dbo].[DONHANG] ([MaDH], [MaKH], [NgayLap], [MaPhieuMuaHang], [HinhThucDatHang], [TongTien], [ThanhTien]) VALUES (N'DH001', N'KH001', CAST(N'2024-11-01' AS Date), NULL, N'Online', 0, 0)
 INSERT [dbo].[DONHANG] ([MaDH], [MaKH], [NgayLap], [MaPhieuMuaHang], [HinhThucDatHang], [TongTien], [ThanhTien]) VALUES (N'DH002', N'KH002', CAST(N'2024-11-02' AS Date), NULL, N'Offine', 0, 0)
@@ -28,7 +28,7 @@ INSERT [dbo].[SALE] ([MaKM], [ThoiGianBatDau], [ThoiGianKetThuc]) VALUES (N'KM00
 GO
 INSERT [dbo].[MEMBERSALE] ([MaKM], [MucThanThiet], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM004', N'T1', CAST(0.30 AS Decimal(5, 2)), 50, 0)
 INSERT [dbo].[MEMBERSALE] ([MaKM], [MucThanThiet], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM005', N'T2', CAST(0.30 AS Decimal(5, 2)), 50, 0)
-INSERT [dbo].[MEMBERSALE] ([MaKM], [MucThanThiet], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM006', N'T3', CAST(0.30 AS Decimal(5, 2)), 50, 8)
+INSERT [dbo].[MEMBERSALE] ([MaKM], [MucThanThiet], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM006', N'T3', CAST(0.30 AS Decimal(5, 2)), 50, 0)
 GO
 INSERT [dbo].[DANHMUC] ([MaDanhMuc], [TenDanhMuc], [MoTa]) VALUES (N'DM001', N'Dồ uống', N'Nước giải khát, sữa các loại')
 INSERT [dbo].[DANHMUC] ([MaDanhMuc], [TenDanhMuc], [MoTa]) VALUES (N'DM002', N'Bánh kẹo', N'Bánh quy, bánh mì, các loại kẹo')
@@ -67,10 +67,10 @@ INSERT [dbo].[CHITIETDH] ([MaDH], [MaSP], [SoLuong], [GiaNiemYet], [MaKM], [SoLu
 INSERT [dbo].[CHITIETDH] ([MaDH], [MaSP], [SoLuong], [GiaNiemYet], [MaKM], [SoLuongSPDaApDung], [ThanhTien]) VALUES (N'DH005', N'SP002', 5, 0, NULL, 0, 0)
 GO
 INSERT [dbo].[FLASHSALE] ([MaKM], [MaSP], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM001', N'SP001', CAST(0.30 AS Decimal(5, 2)), 50, 0)
-INSERT [dbo].[FLASHSALE] ([MaKM], [MaSP], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM002', N'SP002', CAST(0.20 AS Decimal(5, 2)), 100, 2)
+INSERT [dbo].[FLASHSALE] ([MaKM], [MaSP], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM002', N'SP002', CAST(0.20 AS Decimal(5, 2)), 100, 0)
 GO
 INSERT [dbo].[COMBOSALE] ([MaKM], [MaSP1], [MaSP2], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM003', N'SP001', N'SP002', CAST(0.25 AS Decimal(5, 2)), 40, 0)
-INSERT [dbo].[COMBOSALE] ([MaKM], [MaSP1], [MaSP2], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM007', N'SP003', N'SP004', CAST(0.25 AS Decimal(5, 2)), 40, 1)
+INSERT [dbo].[COMBOSALE] ([MaKM], [MaSP1], [MaSP2], [TiLeGiamGia], [SoLuongGioiHan], [SoLuongSPDaApDung]) VALUES (N'KM007', N'SP003', N'SP004', CAST(0.25 AS Decimal(5, 2)), 40, 0)
 GO
 INSERT [dbo].[DONDATHANG] ([MaDDH], [MaSP], [GiaNhap], [SoLuongDat], [SoLuongNhan], [NgayDat], [NgayNhanDuKien], [TrangThai]) VALUES (N'DDH001', N'SP001', 25000, 20, 20, CAST(N'2024-11-05' AS Date), CAST(N'2024-11-10' AS Date), N'Đã nhận')
 INSERT [dbo].[DONDATHANG] ([MaDDH], [MaSP], [GiaNhap], [SoLuongDat], [SoLuongNhan], [NgayDat], [NgayNhanDuKien], [TrangThai]) VALUES (N'DDH002', N'SP002', 40000, 50, 50, CAST(N'2024-11-10' AS Date), CAST(N'2024-11-15' AS Date), N'Chưa nhận')
